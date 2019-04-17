@@ -1,0 +1,21 @@
+%h1= current_page.title
+= content(:text).try(:html_safe)
+
+-# = content(:structure).structure_parts.inspect
+
+- content(:structure).structure_items.each do |si|
+  %div{style:"border:solid 1px red;"}
+    = si.structure_parts.inspect
+    %table
+      %tr
+        %th= si.content(:title).try(:html_safe)
+        %td= si.content(:description).try(:html_safe)
+
+%center
+  %table
+    - content(:attachment_collection).attachments.each do |a|
+      %tr
+        %td
+          - pieces = main_app.url_for(a.file).split("/")
+          - filename = pieces[pieces.size-1]
+          = link_to filename, main_app.url_for(a.file)

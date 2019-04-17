@@ -1,0 +1,14 @@
+%h1= current_page.title
+= content(:text).try(:html_safe)
+
+%center
+  %div= image_tag main_app.url_for(content(:image).variant(resize:"500x500"))
+
+  %table
+    %tr
+      - content(:image_collection).images.each do |i|
+        %td= image_tag main_app.url_for(i.variant(resize:"200x200"))
+
+- pieces = main_app.url_for(content(:attachment)).split("/")
+- filename = pieces[pieces.size-1]
+= link_to filename, main_app.url_for(content(:attachment))
