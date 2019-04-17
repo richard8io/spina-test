@@ -1,0 +1,28 @@
+.main {
+  grid-area: content;
+  border: solid 1px black;
+}
+.footer {
+  grid-area: footer;
+  background: #262E37;
+  border: solid 1px silver;
+}
+.aside {
+  grid-area: sidebar;
+  background: silver;
+  border: solid 1px silver;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 1fr 90px;
+  grid-template-areas: "sidebar  content"
+                       "footer  footer";
+}

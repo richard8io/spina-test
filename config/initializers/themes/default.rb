@@ -75,6 +75,10 @@
     name:       'reports',
     title:      'Reports',
     page_parts: ['text', 'attachment_collection', 'structure']
+  }, {
+    name:       'news',
+    title:      'News',
+    page_parts: ['text']
   }]
 
   theme.custom_pages = [{

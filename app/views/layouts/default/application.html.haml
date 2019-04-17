@@ -3,9 +3,10 @@
   %head
     %title= current_account.name
     = stylesheet_link_tag    'default/application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'grid'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    .container
-      = render 'default/shared/navigation'
-      = yield
+    .aside= render 'default/shared/navigation'
+    .main= yield
+    .footer footer
