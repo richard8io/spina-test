@@ -1,16 +1,13 @@
 .main {
   grid-area: content;
-  border: solid 1px black;
 }
 .footer {
   grid-area: footer;
   background: #262E37;
-  border: solid 1px silver;
 }
 .aside {
   grid-area: sidebar;
   background: silver;
-  border: solid 1px silver;
 }
 
 html {
