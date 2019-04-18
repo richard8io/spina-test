@@ -1,4 +1,4 @@
 .nav
   - Spina::Page.live.all.each do |page|
-    .nav-item{class: ('active' if page == current_page)}
+    .nav-item{class: ('active' if defined?(current_page) && page == current_page)}
       %br= link_to page.menu_title, page.materialized_path, class:"btn btn-primary"

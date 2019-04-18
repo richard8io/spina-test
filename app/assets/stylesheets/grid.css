@@ -1,11 +1,11 @@
-.main {
+.content {
   grid-area: content;
 }
 .footer {
   grid-area: footer;
   background: #262E37;
 }
-.aside {
+.sidebar {
   grid-area: sidebar;
   background: silver;
 }

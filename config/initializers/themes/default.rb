@@ -63,8 +63,8 @@
 
   theme.view_templates = [{
     name:       'homepage',
-    title:      'Homepage',
-    page_parts: ['text']
+    title:      'Getting Started',
+    page_parts: ['text', 'structure']
   }, {
     name:       'show',
     title:      'Default',
@@ -83,7 +83,7 @@
 
   theme.custom_pages = [{
     name:           'homepage',
-    title:          'Homepage',
+    title:          'Getting Started',
     deletable:      false,
     view_template:  'homepage'
   }]
